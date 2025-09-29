@@ -1,5 +1,5 @@
 # Stage 1: Build with Maven (Java 21)
-FROM maven:3.9.3-eclipse-temurin-21 AS builder
+FROM maven:3.9.3-jdk-21 AS builder
 WORKDIR /app
 COPY pom.xml .
 RUN mvn dependency:go-offline -B
